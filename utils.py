@@ -41,7 +41,7 @@ def prepare_parser():
     '--augment', action='store_true', default=False,
     help='Augment with random crops and flips (default: %(default)s)')
   parser.add_argument(
-    '--num_workers', type=int, default=8,
+    '--num_workers', type=int, default=4,
     help='Number of dataloader workers; consider using less for HDF5 '
          '(default: %(default)s)')
   parser.add_argument(
@@ -164,7 +164,7 @@ def prepare_parser():
     
   ### Batch size, parallel, and precision stuff ###
   parser.add_argument(
-    '--batch_size', type=int, default=64,
+    '--batch_size', type=int, default=128,
     help='Default overall batchsize (default: %(default)s)')
   parser.add_argument(
     '--G_batch_size', type=int, default=0,
@@ -184,7 +184,7 @@ def prepare_parser():
     '--split_D', action='store_true', default=False,
     help='Run D twice rather than concatenating inputs? (default: %(default)s)')
   parser.add_argument(
-    '--num_epochs', type=int, default=100,
+    '--num_epochs', type=int, default=50,
     help='Number of epochs to train for (default: %(default)s)')
   parser.add_argument(
     '--parallel', action='store_true', default=False,
@@ -217,7 +217,7 @@ def prepare_parser():
     help='Run G in eval mode (running/standing stats?) at sample/test time? '
          '(default: %(default)s)')
   parser.add_argument(
-    '--save_every', type=int, default=2000,
+    '--save_every', type=int, default=1000,
     help='Save every X iterations (default: %(default)s)')
   parser.add_argument(
     '--num_save_copies', type=int, default=2,
@@ -233,7 +233,7 @@ def prepare_parser():
     '--no_fid', action='store_true', default=False,
     help='Calculate IS only, not FID? (default: %(default)s)')
   parser.add_argument(
-    '--test_every', type=int, default=5000,
+    '--test_every', type=int, default=500,
     help='Test every X iterations (default: %(default)s)')
   parser.add_argument(
     '--num_inception_images', type=int, default=50000,
