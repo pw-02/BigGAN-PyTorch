@@ -164,7 +164,7 @@ def prepare_parser():
     
   ### Batch size, parallel, and precision stuff ###
   parser.add_argument(
-    '--batch_size', type=int, default=128,
+    '--batch_size', type=int, default=64,
     help='Default overall batchsize (default: %(default)s)')
   parser.add_argument(
     '--G_batch_size', type=int, default=0,
@@ -184,7 +184,7 @@ def prepare_parser():
     '--split_D', action='store_true', default=False,
     help='Run D twice rather than concatenating inputs? (default: %(default)s)')
   parser.add_argument(
-    '--num_epochs', type=int, default=50,
+    '--num_epochs', type=int, default=100,
     help='Number of epochs to train for (default: %(default)s)')
   parser.add_argument(
     '--parallel', action='store_true', default=False,
