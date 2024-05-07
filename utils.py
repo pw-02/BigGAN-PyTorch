@@ -184,7 +184,7 @@ def prepare_parser():
     '--split_D', action='store_true', default=False,
     help='Run D twice rather than concatenating inputs? (default: %(default)s)')
   parser.add_argument(
-    '--num_epochs', type=int, default=100,
+    '--num_epochs', type=int, default=50,
     help='Number of epochs to train for (default: %(default)s)')
   parser.add_argument(
     '--parallel', action='store_true', default=False,
@@ -217,7 +217,7 @@ def prepare_parser():
     help='Run G in eval mode (running/standing stats?) at sample/test time? '
          '(default: %(default)s)')
   parser.add_argument(
-    '--save_every', type=int, default=1000,
+    '--save_every', type=int, default=625,
     help='Save every X iterations (default: %(default)s)')
   parser.add_argument(
     '--num_save_copies', type=int, default=2,
