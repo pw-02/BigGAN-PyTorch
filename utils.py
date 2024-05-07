@@ -190,10 +190,10 @@ def prepare_parser():
     '--parallel', action='store_true', default=False,
     help='Train with multiple GPUs (default: %(default)s)')
   parser.add_argument(
-    '--G_fp16', action='store_true', default=False,
+    '--G_fp16', action='store_true', default=True,
     help='Train with half-precision in G? (default: %(default)s)')
   parser.add_argument(
-    '--D_fp16', action='store_true', default=False,
+    '--D_fp16', action='store_true', default=True,
     help='Train with half-precision in D? (default: %(default)s)')
   parser.add_argument(
     '--D_mixed_precision', action='store_true', default=False,
